@@ -2,7 +2,7 @@
 TSMS_ENABLED=1
 ; TurboSMS gateway address
 TSMS_GATEWAY="http://smspilot.ru/api.php"
-;User password for access TurboSMS gateway
+;User login, password and extra for access SMS gateway, urlencoded
 TSMS_PASSWORD="apikey=134513451345"
 ;Phone number prefix
 TSMS_PHONEPREFIX="+7"
