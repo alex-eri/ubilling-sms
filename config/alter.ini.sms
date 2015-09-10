@@ -5,7 +5,7 @@ TSMS_GATEWAY="http://smspilot.ru/api.php"
 ;Working database name
 TSMS_DB="users"
 ;User login to access TurboSMS gateway
-TSMS_LOGIN="lirik.nivas@gmail.com"
+TSMS_LOGIN="login@gmail.com"
 ;User password for access TurboSMS gateway
 TSMS_PASSWORD="apikey=134513451345"
 ;Phone number prefix
