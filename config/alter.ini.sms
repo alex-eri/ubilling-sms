@@ -1,0 +1,13 @@
+; TurboSMS support is enabled?
+TSMS_ENABLED=1
+; TurboSMS gateway address
+TSMS_GATEWAY="http://smspilot.ru/api.php"
+;Working database name
+TSMS_DB="users"
+;User login to access TurboSMS gateway
+TSMS_LOGIN="lirik.nivas@gmail.com"
+;User password for access TurboSMS gateway
+TSMS_PASSWORD="apikey=BUI273P0AB7HUN7Y872PSS823997009Q782A23L08XGRWBTMAMSG11EK1YX7I5M5"
+;Phone number prefix
+TSMS_PHONEPREFIX="+"
+
