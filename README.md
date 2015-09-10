@@ -1,5 +1,7 @@
 # ubilling-sms
 
+кусочек конфига из config/alter.ini.sms нужно вставить в alter.ini заменив старые параметры
+
 открывай документацию к апи, например
 http://smsaero.ru/api/description и читай какие параметры нужны
 
