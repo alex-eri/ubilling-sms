@@ -82,11 +82,13 @@ if (cfr('TURBOSMS')) {
          */
         //reading config
         $tsms_host = $altercfg['TSMS_GATEWAY'];
-        $tsms_db = $altercfg['TSMS_DB'];
-        $tsms_login = $altercfg['TSMS_LOGIN'];
+        $tsms_db = "passed";
+        $tsms_login = "passed";
         $tsms_password = $altercfg['TSMS_PASSWORD'];
         $tsms_table = $tsms_login;
         $tsms_prefix=$altercfg['TSMS_PHONEPREFIX'];
+        $tsms_phone_key=$altercfg['TSMS_PHONE_KEY'];
+        $tsms_msg_key=$altercfg['TSMS_MESSAGE_KEY'];
        //loading ubilling database
         $td_realnames=  zb_UserGetAllRealnames();
         $td_realnamestrans=  tsms_RealnamesTranslit($td_realnames);
@@ -272,7 +274,7 @@ if (cfr('TURBOSMS')) {
         
         
         function tsms_SendSMS($number,$sign,$message,$wappush,$timezone) {
-            global $tsms_table;
+            global $tsms_table,$tsms_phone_key,$tsms_msg_key;
             $number=   tsms_SafeEscapeString($number);
             $sign=     tsms_SafeEscapeString($sign);
             $message=  tsms_SafeEscapeString($message);
@@ -288,7 +290,7 @@ if (cfr('TURBOSMS')) {
            $tz_offset=(2-$timezone)*3600;
            $date=date("Y-m-d H:i:s",time()+$tz_offset);
           
-           $query="to=".$number."&send=".$message ;
+           $query=$tsms_phone_key."=".$number."&".$tsms_msg_key."=".$message ;
             
            tsms_query($query);
         }
